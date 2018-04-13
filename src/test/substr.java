@@ -12,9 +12,9 @@ public class substr {
 //		String nj = yyyymm.substring(0,4);
 //		System.out.println(nj);
 		
-		String yyyymm = "01asd   da£¬1";
-		
-		System.out.println(yyyymm.replace(" ", "").equals(yyyymm));
+		String yyyymm = "519901000001";
+		System.out.println(yyyymm.substring(0,4));
+		System.out.println("3126" + yyyymm.substring(4, yyyymm.length()));
 //		System.out.println(yyyymm.substring(0, yyyymm.length()-1));
 	}
 

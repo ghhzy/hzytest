@@ -3,7 +3,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * ÕıÔò±í´ïÊ½
+ * æ­£åˆ™è¡¨è¾¾å¼
  * @version V5.0
  * @author Admin
  * @date   2015-7-25
@@ -21,21 +21,21 @@ public class Regex {
         Matcher matcher = pattern.matcher("bbg");
         System.out.println(matcher.matches());
         System.out.println(pattern.matches("b*g","bbg"));
-        //ÑéÖ¤ÓÊÕş±àÂë
+        //éªŒè¯é‚®æ”¿ç¼–ç 
         System.out.println(pattern.matches("[0-9]{6}", "200038"));
         System.out.println(pattern.matches("//d{6}", "200038"));
-        //ÑéÖ¤µç»°ºÅÂë
+        //éªŒè¯ç”µè¯å·ç 
         System.out.println(pattern.matches("[0-9]{3,4}//-?[0-9]+", "02178989799"));
         getDate("Nov 10,2009");
         charReplace();
-        //ÑéÖ¤Éí·İÖ¤:ÅĞ¶ÏÒ»¸ö×Ö·û´®ÊÇ²»ÊÇÉí·İÖ¤ºÅÂë£¬¼´ÊÇ·ñÊÇ15»ò18Î»Êı×Ö¡£
+        //éªŒè¯èº«ä»½è¯:åˆ¤æ–­ä¸€ä¸ªå­—ç¬¦ä¸²æ˜¯ä¸æ˜¯èº«ä»½è¯å·ç ï¼Œå³æ˜¯å¦æ˜¯15æˆ–18ä½æ•°å­—ã€‚
         System.out.println(pattern.matches("^//d{15}|//d{18}$", "123456789009876"));
         getString("D:/dir1/test.txt");*/
-//        getChinese("welcome to china,½­Î÷·îĞÂ,welcome,Äã!");
+//        getChinese("welcome to china,æ±Ÿè¥¿å¥‰æ–°,welcome,ä½ !");
         
         
-        String regex = "welcometochina½­Î÷·îĞÂwelcomeÄã";
-        String regex1 = "½­Î÷·îĞÂ2a";
+        String regex = "welcometochinaæ±Ÿè¥¿å¥‰æ–°welcomeä½ ";
+        String regex1 = "æ±Ÿè¥¿å¥‰æ–°2a";
         Pattern pattern = Pattern.compile(regex);
         System.out.println(pattern.matches("^(.|/n){0,5}$", regex1));
         
@@ -43,7 +43,7 @@ public class Regex {
 //        validateEmail("luosijin123@163.com");
     }
     /**
-     * ÈÕÆÚÌáÈ¡:ÌáÈ¡³öÔÂ·İÀ´
+     * æ—¥æœŸæå–:æå–å‡ºæœˆä»½æ¥
      * @param str
      * @author Admin
      * @date 2015-7-25
@@ -53,13 +53,13 @@ public class Regex {
         Pattern pattern = Pattern.compile(regEx);
         Matcher matcher = pattern.matcher(str);
         if(!matcher.find()){
-            System.out.println("ÈÕÆÚ¸ñÊ½´íÎó!");
+            System.out.println("æ—¥æœŸæ ¼å¼é”™è¯¯!");
             return;
         }
-        System.out.println(matcher.group(1));    //·Ö×éµÄË÷ÒıÖµÊÇ´Ó1¿ªÊ¼µÄ£¬ËùÒÔÈ¡µÚÒ»¸ö·Ö×éµÄ·½·¨ÊÇm.group(1)¶ø²»ÊÇm.group(0)¡£
+        System.out.println(matcher.group(1));    //åˆ†ç»„çš„ç´¢å¼•å€¼æ˜¯ä»1å¼€å§‹çš„ï¼Œæ‰€ä»¥å–ç¬¬ä¸€ä¸ªåˆ†ç»„çš„æ–¹æ³•æ˜¯m.group(1)è€Œä¸æ˜¯m.group(0)ã€‚
     }
     /**
-     * ×Ö·ûÌæ»»:±¾ÊµÀıÎª½«Ò»¸ö×Ö·û´®ÖĞËùÓĞ°üº¬Ò»¸ö»ò¶à¸öÁ¬ĞøµÄ¡°a¡±µÄµØ·½¶¼Ìæ»»³É¡°A¡±¡£
+     * å­—ç¬¦æ›¿æ¢:æœ¬å®ä¾‹ä¸ºå°†ä¸€ä¸ªå­—ç¬¦ä¸²ä¸­æ‰€æœ‰åŒ…å«ä¸€ä¸ªæˆ–å¤šä¸ªè¿ç»­çš„â€œaâ€çš„åœ°æ–¹éƒ½æ›¿æ¢æˆâ€œAâ€ã€‚
      * 
      * @author Admin
      * @date 2015-7-25
@@ -72,7 +72,7 @@ public class Regex {
         System.out.println(s);
     }
     /**
-     * ×Ö·û´®ÌáÈ¡
+     * å­—ç¬¦ä¸²æå–
      * @param str
      * @author Admin
      * @date 2015-7-25
@@ -82,19 +82,19 @@ public class Regex {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str);
         if(!matcher.find()){
-            System.out.println("ÎÄ¼şÂ·¾¶¸ñÊ½²»ÕıÈ·£¡");
+            System.out.println("æ–‡ä»¶è·¯å¾„æ ¼å¼ä¸æ­£ç¡®ï¼");
             return;
         }
         System.out.println(matcher.group(1));
     }
     /**
-     * ÖĞÎÄÌáÈ¡
+     * ä¸­æ–‡æå–
      * @param str
      * @author Admin
      * @date 2015-7-25
      */
     public static void getChinese(String str){
-        String regex = "[\u4e00-\u9fa5]+";//[//u4E00-//u9FFF]Îªºº×Ö 
+        String regex = "[\u4e00-\u9fa5]+";//[//u4E00-//u9FFF]ä¸ºæ±‰å­— 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str);
         StringBuffer sb = new StringBuffer();
@@ -104,7 +104,7 @@ public class Regex {
         System.out.println(sb);
     }
     /**
-     * ÑéÖ¤Email
+     * éªŒè¯Email
      * @param email
      * @author Admin
      * @date 2015-7-25
@@ -114,9 +114,9 @@ public class Regex {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
         if(matcher.matches()){
-            System.out.println("ÕâÊÇºÏ·¨µÄEmail");
+            System.out.println("è¿™æ˜¯åˆæ³•çš„Email");
         }else{
-            System.out.println("ÕâÊÇ·Ç·¨µÄEmail");
+            System.out.println("è¿™æ˜¯éæ³•çš„Email");
         }
     }
 }

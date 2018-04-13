@@ -15,162 +15,162 @@ public class ReflectFields {
 		Field[] fields = demo.getDeclaredFields();
 		Method[] methods = demo.getDeclaredMethods();
 		for (Field f : fields) {
-			System.out.println("×Ö¶Î:" + f.getName());
-			System.out.println("×Ö¶ÎÀàĞÍ:" + f.getType());
+			System.out.println("å­—æ®µ:" + f.getName());
+			System.out.println("å­—æ®µç±»å‹:" + f.getType());
 		}
 
 	}
 	
 	class EsA0 {
 
-		private String ÈËÔ±ID;
+		private String äººå‘˜ID;
 		
-		private String ĞÕÃû;
+		private String å§“å;
 		
-		private String Ö¤¼şÀàĞÍ;
+		private String è¯ä»¶ç±»å‹;
 		
-		private String ÈËÔ±×´Ì¬;
+		private String äººå‘˜çŠ¶æ€;
 		
-		private String Ö¤¼şºÅ;
+		private String è¯ä»¶å·;
 		
-		private String ĞÔ±ğ;
+		private String æ€§åˆ«;
 		
-		private Date ³öÉúÈÕÆÚ;
+		private Date å‡ºç”Ÿæ—¥æœŸ;
 		
-		private Date ²Î¼Ó¹¤×÷Ê±¼ä;
+		private Date å‚åŠ å·¥ä½œæ—¶é—´;
 		
-		private List<String> Ñ§Ï°¾­Àú¼¯ºÏ;
+		private List<String> å­¦ä¹ ç»å†é›†åˆ;
 		
-		private List<String> ×¨Òµ¼¼Êõ×Ê¸ñ¼¯ºÏ;
+		private List<String> ä¸“ä¸šæŠ€æœ¯èµ„æ ¼é›†åˆ;
 		
-		private List<String> Äê¶È¿¼ºË¼¯ºÏ;
+		private List<String> å¹´åº¦è€ƒæ ¸é›†åˆ;
 		
-		private List<String> ¹¤×÷¾­Àú¼¯ºÏ;
+		private List<String> å·¥ä½œç»å†é›†åˆ;
 		
-		private List<String> ¿ÆÑĞÏîÄ¿¼¯ºÏ;
+		private List<String> ç§‘ç ”é¡¹ç›®é›†åˆ;
 		
-		private List<String> ¹æ»®±ê×¼¼¯ºÏ;
+		private List<String> è§„åˆ’æ ‡å‡†é›†åˆ;
 		
-		private List<String> ÂÛÎÄ¼¯ºÏ;
+		private List<String> è®ºæ–‡é›†åˆ;
 
-		public String getÈËÔ±ID() {
-			return ÈËÔ±ID;
+		public String getäººå‘˜ID() {
+			return äººå‘˜ID;
 		}
 
-		public void setÈËÔ±ID(String ÈËÔ±id) {
-			ÈËÔ±ID = ÈËÔ±id;
+		public void setäººå‘˜ID(String äººå‘˜id) {
+			äººå‘˜ID = äººå‘˜id;
 		}
 
-		public String getĞÕÃû() {
-			return ĞÕÃû;
+		public String getå§“å() {
+			return å§“å;
 		}
 
-		public void setĞÕÃû(String ĞÕÃû) {
-			this.ĞÕÃû = ĞÕÃû;
+		public void setå§“å(String å§“å) {
+			this.å§“å = å§“å;
 		}
 
-		public String getÖ¤¼şÀàĞÍ() {
-			return Ö¤¼şÀàĞÍ;
+		public String getè¯ä»¶ç±»å‹() {
+			return è¯ä»¶ç±»å‹;
 		}
 
-		public void setÖ¤¼şÀàĞÍ(String Ö¤¼şÀàĞÍ) {
-			this.Ö¤¼şÀàĞÍ = Ö¤¼şÀàĞÍ;
+		public void setè¯ä»¶ç±»å‹(String è¯ä»¶ç±»å‹) {
+			this.è¯ä»¶ç±»å‹ = è¯ä»¶ç±»å‹;
 		}
 
-		public String getÈËÔ±×´Ì¬() {
-			return ÈËÔ±×´Ì¬;
+		public String getäººå‘˜çŠ¶æ€() {
+			return äººå‘˜çŠ¶æ€;
 		}
 
-		public void setÈËÔ±×´Ì¬(String ÈËÔ±×´Ì¬) {
-			this.ÈËÔ±×´Ì¬ = ÈËÔ±×´Ì¬;
+		public void setäººå‘˜çŠ¶æ€(String äººå‘˜çŠ¶æ€) {
+			this.äººå‘˜çŠ¶æ€ = äººå‘˜çŠ¶æ€;
 		}
 
-		public String getÖ¤¼şºÅ() {
-			return Ö¤¼şºÅ;
+		public String getè¯ä»¶å·() {
+			return è¯ä»¶å·;
 		}
 
-		public void setÖ¤¼şºÅ(String Ö¤¼şºÅ) {
-			this.Ö¤¼şºÅ = Ö¤¼şºÅ;
+		public void setè¯ä»¶å·(String è¯ä»¶å·) {
+			this.è¯ä»¶å· = è¯ä»¶å·;
 		}
 
-		public String getĞÔ±ğ() {
-			return ĞÔ±ğ;
+		public String getæ€§åˆ«() {
+			return æ€§åˆ«;
 		}
 
-		public void setĞÔ±ğ(String ĞÔ±ğ) {
-			this.ĞÔ±ğ = ĞÔ±ğ;
+		public void setæ€§åˆ«(String æ€§åˆ«) {
+			this.æ€§åˆ« = æ€§åˆ«;
 		}
 
-		public Date get³öÉúÈÕÆÚ() {
-			return ³öÉúÈÕÆÚ;
+		public Date getå‡ºç”Ÿæ—¥æœŸ() {
+			return å‡ºç”Ÿæ—¥æœŸ;
 		}
 
-		public void set³öÉúÈÕÆÚ(Date ³öÉúÈÕÆÚ) {
-			this.³öÉúÈÕÆÚ = ³öÉúÈÕÆÚ;
+		public void setå‡ºç”Ÿæ—¥æœŸ(Date å‡ºç”Ÿæ—¥æœŸ) {
+			this.å‡ºç”Ÿæ—¥æœŸ = å‡ºç”Ÿæ—¥æœŸ;
 		}
 
-		public Date get²Î¼Ó¹¤×÷Ê±¼ä() {
-			return ²Î¼Ó¹¤×÷Ê±¼ä;
+		public Date getå‚åŠ å·¥ä½œæ—¶é—´() {
+			return å‚åŠ å·¥ä½œæ—¶é—´;
 		}
 
-		public void set²Î¼Ó¹¤×÷Ê±¼ä(Date ²Î¼Ó¹¤×÷Ê±¼ä) {
-			this.²Î¼Ó¹¤×÷Ê±¼ä = ²Î¼Ó¹¤×÷Ê±¼ä;
+		public void setå‚åŠ å·¥ä½œæ—¶é—´(Date å‚åŠ å·¥ä½œæ—¶é—´) {
+			this.å‚åŠ å·¥ä½œæ—¶é—´ = å‚åŠ å·¥ä½œæ—¶é—´;
 		}
 
-		public List<String> getÑ§Ï°¾­Àú¼¯ºÏ() {
-			return Ñ§Ï°¾­Àú¼¯ºÏ;
+		public List<String> getå­¦ä¹ ç»å†é›†åˆ() {
+			return å­¦ä¹ ç»å†é›†åˆ;
 		}
 
-		public void setÑ§Ï°¾­Àú¼¯ºÏ(List<String> Ñ§Ï°¾­Àú¼¯ºÏ) {
-			this.Ñ§Ï°¾­Àú¼¯ºÏ = Ñ§Ï°¾­Àú¼¯ºÏ;
+		public void setå­¦ä¹ ç»å†é›†åˆ(List<String> å­¦ä¹ ç»å†é›†åˆ) {
+			this.å­¦ä¹ ç»å†é›†åˆ = å­¦ä¹ ç»å†é›†åˆ;
 		}
 
-		public List<String> get×¨Òµ¼¼Êõ×Ê¸ñ¼¯ºÏ() {
-			return ×¨Òµ¼¼Êõ×Ê¸ñ¼¯ºÏ;
+		public List<String> getä¸“ä¸šæŠ€æœ¯èµ„æ ¼é›†åˆ() {
+			return ä¸“ä¸šæŠ€æœ¯èµ„æ ¼é›†åˆ;
 		}
 
-		public void set×¨Òµ¼¼Êõ×Ê¸ñ¼¯ºÏ(List<String> ×¨Òµ¼¼Êõ×Ê¸ñ¼¯ºÏ) {
-			this.×¨Òµ¼¼Êõ×Ê¸ñ¼¯ºÏ = ×¨Òµ¼¼Êõ×Ê¸ñ¼¯ºÏ;
+		public void setä¸“ä¸šæŠ€æœ¯èµ„æ ¼é›†åˆ(List<String> ä¸“ä¸šæŠ€æœ¯èµ„æ ¼é›†åˆ) {
+			this.ä¸“ä¸šæŠ€æœ¯èµ„æ ¼é›†åˆ = ä¸“ä¸šæŠ€æœ¯èµ„æ ¼é›†åˆ;
 		}
 
-		public List<String> getÄê¶È¿¼ºË¼¯ºÏ() {
-			return Äê¶È¿¼ºË¼¯ºÏ;
+		public List<String> getå¹´åº¦è€ƒæ ¸é›†åˆ() {
+			return å¹´åº¦è€ƒæ ¸é›†åˆ;
 		}
 
-		public void setÄê¶È¿¼ºË¼¯ºÏ(List<String> Äê¶È¿¼ºË¼¯ºÏ) {
-			this.Äê¶È¿¼ºË¼¯ºÏ = Äê¶È¿¼ºË¼¯ºÏ;
+		public void setå¹´åº¦è€ƒæ ¸é›†åˆ(List<String> å¹´åº¦è€ƒæ ¸é›†åˆ) {
+			this.å¹´åº¦è€ƒæ ¸é›†åˆ = å¹´åº¦è€ƒæ ¸é›†åˆ;
 		}
 
-		public List<String> get¹¤×÷¾­Àú¼¯ºÏ() {
-			return ¹¤×÷¾­Àú¼¯ºÏ;
+		public List<String> getå·¥ä½œç»å†é›†åˆ() {
+			return å·¥ä½œç»å†é›†åˆ;
 		}
 
-		public void set¹¤×÷¾­Àú¼¯ºÏ(List<String> ¹¤×÷¾­Àú¼¯ºÏ) {
-			this.¹¤×÷¾­Àú¼¯ºÏ = ¹¤×÷¾­Àú¼¯ºÏ;
+		public void setå·¥ä½œç»å†é›†åˆ(List<String> å·¥ä½œç»å†é›†åˆ) {
+			this.å·¥ä½œç»å†é›†åˆ = å·¥ä½œç»å†é›†åˆ;
 		}
 
-		public List<String> get¿ÆÑĞÏîÄ¿¼¯ºÏ() {
-			return ¿ÆÑĞÏîÄ¿¼¯ºÏ;
+		public List<String> getç§‘ç ”é¡¹ç›®é›†åˆ() {
+			return ç§‘ç ”é¡¹ç›®é›†åˆ;
 		}
 
-		public void set¿ÆÑĞÏîÄ¿¼¯ºÏ(List<String> ¿ÆÑĞÏîÄ¿¼¯ºÏ) {
-			this.¿ÆÑĞÏîÄ¿¼¯ºÏ = ¿ÆÑĞÏîÄ¿¼¯ºÏ;
+		public void setç§‘ç ”é¡¹ç›®é›†åˆ(List<String> ç§‘ç ”é¡¹ç›®é›†åˆ) {
+			this.ç§‘ç ”é¡¹ç›®é›†åˆ = ç§‘ç ”é¡¹ç›®é›†åˆ;
 		}
 
-		public List<String> get¹æ»®±ê×¼¼¯ºÏ() {
-			return ¹æ»®±ê×¼¼¯ºÏ;
+		public List<String> getè§„åˆ’æ ‡å‡†é›†åˆ() {
+			return è§„åˆ’æ ‡å‡†é›†åˆ;
 		}
 
-		public void set¹æ»®±ê×¼¼¯ºÏ(List<String> ¹æ»®±ê×¼¼¯ºÏ) {
-			this.¹æ»®±ê×¼¼¯ºÏ = ¹æ»®±ê×¼¼¯ºÏ;
+		public void setè§„åˆ’æ ‡å‡†é›†åˆ(List<String> è§„åˆ’æ ‡å‡†é›†åˆ) {
+			this.è§„åˆ’æ ‡å‡†é›†åˆ = è§„åˆ’æ ‡å‡†é›†åˆ;
 		}
 
-		public List<String> getÂÛÎÄ¼¯ºÏ() {
-			return ÂÛÎÄ¼¯ºÏ;
+		public List<String> getè®ºæ–‡é›†åˆ() {
+			return è®ºæ–‡é›†åˆ;
 		}
 
-		public void setÂÛÎÄ¼¯ºÏ(List<String> ÂÛÎÄ¼¯ºÏ) {
-			this.ÂÛÎÄ¼¯ºÏ = ÂÛÎÄ¼¯ºÏ;
+		public void setè®ºæ–‡é›†åˆ(List<String> è®ºæ–‡é›†åˆ) {
+			this.è®ºæ–‡é›†åˆ = è®ºæ–‡é›†åˆ;
 		}
 		
 		

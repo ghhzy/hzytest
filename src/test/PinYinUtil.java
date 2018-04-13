@@ -63,7 +63,7 @@ public class PinYinUtil {
     }
     
     public static void main(String[] args) {
-    	System.out.println(getFullSpell("龚公a公"));
+    	System.out.println(getFullSpell("苑严华"));
     	
 	}
     

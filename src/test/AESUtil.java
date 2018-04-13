@@ -1,5 +1,6 @@
 package test;
 
+
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -14,12 +15,11 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
 /**
- * AES Encrypter
- * @author shenyin
  *
  */
 public class AESUtil {
 
+	private static int length=128;
 	/**
 	 * encryptAES
 	 * @param content
@@ -28,10 +28,9 @@ public class AESUtil {
 	 */
 	private static byte[] encryptAES(String content, String password) {
 		try {
-			SecretKey secretKey = getKey(password);
-			/*KeyGenerator kgen = KeyGenerator.getInstance("AES");
+			KeyGenerator kgen = KeyGenerator.getInstance("AES");
 			kgen.init(128, new SecureRandom(password.getBytes()));
-			SecretKey secretKey = kgen.generateKey();*/
+			SecretKey secretKey = kgen.generateKey();
 			byte[] enCodeFormat = secretKey.getEncoded();
 			SecretKeySpec key = new SecretKeySpec(enCodeFormat, "AES");
 			Cipher cipher = Cipher.getInstance("AES");
@@ -99,17 +98,32 @@ public class AESUtil {
 	 */
 	private static byte[] decryptAES(byte[] content, String password) {
 		try {
-			
-			SecretKey secretKey = getKey(password);
-			/*KeyGenerator kgen = KeyGenerator.getInstance("AES");
-			kgen.init(128, new SecureRandom(password.getBytes()));
-			SecretKey secretKey = kgen.generateKey();*/
+			KeyGenerator kgen = KeyGenerator.getInstance("AES");
+			 SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG"); 
+			secureRandom.setSeed(password.getBytes());
+
+
+			kgen.init(length, secureRandom);
+
+
+			SecretKey secretKey = kgen.generateKey();
+
+
 			byte[] enCodeFormat = secretKey.getEncoded();
-			SecretKeySpec key = new SecretKeySpec(enCodeFormat, "AES");
-			Cipher cipher = Cipher.getInstance("AES"); 
-			cipher.init(Cipher.DECRYPT_MODE, key); 
+
+
+			SecretKeySpec key = new SecretKeySpec(enCodeFormat,"AES");
+
+
+			Cipher cipher = Cipher.getInstance("AES");// 创建密码器
+
+
+			cipher.init(Cipher.DECRYPT_MODE, key);// 初始化
+
+
 			byte[] result = cipher.doFinal(content);
-			return result;  
+
+			return result;
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		} catch (NoSuchPaddingException e) {
@@ -123,19 +137,6 @@ public class AESUtil {
 		}
 		return null;
 	}
-	
-	
-	public static SecretKey getKey(String strKey) {
-        try {         
-           KeyGenerator _generator = KeyGenerator.getInstance( "AES" );
-            SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG" );
-           secureRandom.setSeed(strKey.getBytes());
-           _generator.init(128,secureRandom);
-               return _generator.generateKey();
-       }  catch (Exception e) {
-            throw new RuntimeException( " 初始化密钥出现异常 " );
-       }
-     }
 
 	/**
 	 * 加密
@@ -171,18 +172,18 @@ public class AESUtil {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String content = "310230197703061496";
-		String password = "~!@IOYN56465";
+		String content = "594778433fa7d63a0abe55c0";
+		String password = "~!@gwypx63816615";
 
 		System.out.println("原文" + content);
 		String encryptResultStr = AESUtil.encrypt(content, password);
 		System.out.println("密文" + encryptResultStr);
 
 		//encryptResultStr = "84E6B8E4783C2EDA468305966B4E846839C1C6ED32AF3FAEB8BA53BA3814B2218822AA2E84224C7BEABD62D8BA59E155D0ABB8ECDF1D437742235A9B3B78113F84DEE2FE0A8F7B0BBA4ADB7109EB205E644F96837FFDC97193C93514FE7016509B3556A145A473003CEFE5E881AF618617CF836DDF30D82191D34C753B8C27B12BE359F347290B087C3A3E1329E71859F209CC96F7D55E65DAA3570BDF2AF657";
-		System.out.println("解密" + AESUtil.decrypt(encryptResultStr, password));
+//		System.out.println("解密" + AESUtil.decrypt(encryptResultStr, password));
+		System.out.println("解密" + AESUtil.decrypt("2B3D0F4F07961B0C9A2B971DD157DCFC218F7FE0CC5CEF41FB02AFEC85C7CE0B", password));
+		System.out.println("解密" + AESUtil.decrypt("B53923538D9490A370F8FDA38FEEAAF4D82E3A5AAE9DED811C835F6869A76E33E6B681296E97467834907A1777D5F3ED", password));
 		
-		
-		System.out.println("解密" + AESUtil.decrypt("2DE812A4508CC9104C31DCD5924687E74EC06F4C4C72B8791F6B62641DB294FD", password));
 
 	}
 	

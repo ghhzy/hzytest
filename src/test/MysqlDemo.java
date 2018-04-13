@@ -37,26 +37,26 @@ public class MysqlDemo {
 	
 	public static List<Map<String,Object>> selectSql(String url, String sql) throws Exception {
 		Connection conn = null;
-		// MySQLµÄJDBC URL±àĞ´·½Ê½£ºjdbc:mysql://Ö÷»úÃû³Æ£ºÁ¬½Ó¶Ë¿Ú/Êı¾İ¿âµÄÃû³Æ?²ÎÊı=Öµ
-		// ±ÜÃâÖĞÎÄÂÒÂëÒªÖ¸¶¨useUnicodeºÍcharacterEncoding
-		// Ö´ĞĞÊı¾İ¿â²Ù×÷Ö®Ç°ÒªÔÚÊı¾İ¿â¹ÜÀíÏµÍ³ÉÏ´´½¨Ò»¸öÊı¾İ¿â£¬Ãû×Ö×Ô¼º¶¨£¬
-		// ÏÂÃæÓï¾äÖ®Ç°¾ÍÒªÏÈ´´½¨javademoÊı¾İ¿â
+		// MySQLçš„JDBC URLç¼–å†™æ–¹å¼ï¼šjdbc:mysql://ä¸»æœºåç§°ï¼šè¿æ¥ç«¯å£/æ•°æ®åº“çš„åç§°?å‚æ•°=å€¼
+		// é¿å…ä¸­æ–‡ä¹±ç è¦æŒ‡å®šuseUnicodeå’ŒcharacterEncoding
+		// æ‰§è¡Œæ•°æ®åº“æ“ä½œä¹‹å‰è¦åœ¨æ•°æ®åº“ç®¡ç†ç³»ç»Ÿä¸Šåˆ›å»ºä¸€ä¸ªæ•°æ®åº“ï¼Œåå­—è‡ªå·±å®šï¼Œ
+		// ä¸‹é¢è¯­å¥ä¹‹å‰å°±è¦å…ˆåˆ›å»ºjavademoæ•°æ®åº“
 		/*String url = "jdbc:mysql://192.168.10.222:3306/czj_data?"
 				+ "user=root" +
 				"&password=~!@Heluo" +
 				"&useUnicode=true" +
 				"&characterEncoding=UTF8";*/
 		try {
-			// Ö®ËùÒÔÒªÊ¹ÓÃÏÂÃæÕâÌõÓï¾ä£¬ÊÇÒòÎªÒªÊ¹ÓÃMySQLµÄÇı¶¯£¬ËùÒÔÎÒÃÇÒª°ÑËüÇı¶¯ÆğÀ´£¬
-			// ¿ÉÒÔÍ¨¹ıClass.forName°ÑËü¼ÓÔØ½øÈ¥£¬Ò²¿ÉÒÔÍ¨¹ı³õÊ¼»¯À´Çı¶¯ÆğÀ´£¬ÏÂÃæÈıÖÖĞÎÊ½¶¼¿ÉÒÔ
-			Class.forName("com.mysql.jdbc.Driver");// ¶¯Ì¬¼ÓÔØmysqlÇı¶¯
-			System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯³ÌĞò");
-			// Ò»¸öConnection´ú±íÒ»¸öÊı¾İ¿âÁ¬½Ó
+			// ä¹‹æ‰€ä»¥è¦ä½¿ç”¨ä¸‹é¢è¿™æ¡è¯­å¥ï¼Œæ˜¯å› ä¸ºè¦ä½¿ç”¨MySQLçš„é©±åŠ¨ï¼Œæ‰€ä»¥æˆ‘ä»¬è¦æŠŠå®ƒé©±åŠ¨èµ·æ¥ï¼Œ
+			// å¯ä»¥é€šè¿‡Class.forNameæŠŠå®ƒåŠ è½½è¿›å»ï¼Œä¹Ÿå¯ä»¥é€šè¿‡åˆå§‹åŒ–æ¥é©±åŠ¨èµ·æ¥ï¼Œä¸‹é¢ä¸‰ç§å½¢å¼éƒ½å¯ä»¥
+			Class.forName("com.mysql.jdbc.Driver");// åŠ¨æ€åŠ è½½mysqlé©±åŠ¨
+			System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨ç¨‹åº");
+			// ä¸€ä¸ªConnectionä»£è¡¨ä¸€ä¸ªæ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(url);
-			// StatementÀïÃæ´øÓĞºÜ¶à·½·¨£¬±ÈÈçexecuteUpdate¿ÉÒÔÊµÏÖ²åÈë£¬¸üĞÂºÍÉ¾³ıµÈ
+			// Statementé‡Œé¢å¸¦æœ‰å¾ˆå¤šæ–¹æ³•ï¼Œæ¯”å¦‚executeUpdateå¯ä»¥å®ç°æ’å…¥ï¼Œæ›´æ–°å’Œåˆ é™¤ç­‰
 			Statement stmt = conn.createStatement();
 			
-			ResultSet rs = stmt.executeQuery(sql);// executeQuery»á·µ»Ø½á¹ûµÄ¼¯ºÏ£¬·ñÔò·µ»Ø¿ÕÖµ
+			ResultSet rs = stmt.executeQuery(sql);// executeQueryä¼šè¿”å›ç»“æœçš„é›†åˆï¼Œå¦åˆ™è¿”å›ç©ºå€¼
 			List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 			while (rs.next()) {
 				Map<String,Object> map = new LinkedHashMap<String,Object>();
@@ -66,11 +66,11 @@ public class MysqlDemo {
 //					System.out.println(map);
 				}
 				list.add(map);
-//				System.out.println(rs.getString(1) + "\t" + rs.getString(2)+ "\t" + rs.getString(3)+ "\t" + rs.getString(4)+ "\t" + AESUtil.decrypt(rs.getString(5), "~!@IOYN56465"));// ÈëÈç¹û·µ»ØµÄÊÇintÀàĞÍ¿ÉÒÔÓÃgetInt()
+//				System.out.println(rs.getString(1) + "\t" + rs.getString(2)+ "\t" + rs.getString(3)+ "\t" + rs.getString(4)+ "\t" + AESUtil.decrypt(rs.getString(5), "~!@IOYN56465"));// å…¥å¦‚æœè¿”å›çš„æ˜¯intç±»å‹å¯ä»¥ç”¨getInt()
 		}
 			return list;
 		} catch (SQLException e) {
-			System.out.println("MySQL²Ù×÷´íÎó");
+			System.out.println("MySQLæ“ä½œé”™è¯¯");
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -83,27 +83,27 @@ public class MysqlDemo {
 	
 	public static void insertSql(String sql) throws Exception {
 		Connection conn = null;
-		// MySQLµÄJDBC URL±àĞ´·½Ê½£ºjdbc:mysql://Ö÷»úÃû³Æ£ºÁ¬½Ó¶Ë¿Ú/Êı¾İ¿âµÄÃû³Æ?²ÎÊı=Öµ
-		// ±ÜÃâÖĞÎÄÂÒÂëÒªÖ¸¶¨useUnicodeºÍcharacterEncoding
-		// Ö´ĞĞÊı¾İ¿â²Ù×÷Ö®Ç°ÒªÔÚÊı¾İ¿â¹ÜÀíÏµÍ³ÉÏ´´½¨Ò»¸öÊı¾İ¿â£¬Ãû×Ö×Ô¼º¶¨£¬
-		// ÏÂÃæÓï¾äÖ®Ç°¾ÍÒªÏÈ´´½¨javademoÊı¾İ¿â
+		// MySQLçš„JDBC URLç¼–å†™æ–¹å¼ï¼šjdbc:mysql://ä¸»æœºåç§°ï¼šè¿æ¥ç«¯å£/æ•°æ®åº“çš„åç§°?å‚æ•°=å€¼
+		// é¿å…ä¸­æ–‡ä¹±ç è¦æŒ‡å®šuseUnicodeå’ŒcharacterEncoding
+		// æ‰§è¡Œæ•°æ®åº“æ“ä½œä¹‹å‰è¦åœ¨æ•°æ®åº“ç®¡ç†ç³»ç»Ÿä¸Šåˆ›å»ºä¸€ä¸ªæ•°æ®åº“ï¼Œåå­—è‡ªå·±å®šï¼Œ
+		// ä¸‹é¢è¯­å¥ä¹‹å‰å°±è¦å…ˆåˆ›å»ºjavademoæ•°æ®åº“
 		String url = "jdbc:mysql://192.168.10.222:3306/hzy_ls_data?"
 				+ "user=root" +
 				"&password=~!@Heluo" +
 				"&useUnicode=true" +
 				"&characterEncoding=UTF8";
 		try {
-			// Ö®ËùÒÔÒªÊ¹ÓÃÏÂÃæÕâÌõÓï¾ä£¬ÊÇÒòÎªÒªÊ¹ÓÃMySQLµÄÇı¶¯£¬ËùÒÔÎÒÃÇÒª°ÑËüÇı¶¯ÆğÀ´£¬
-			// ¿ÉÒÔÍ¨¹ıClass.forName°ÑËü¼ÓÔØ½øÈ¥£¬Ò²¿ÉÒÔÍ¨¹ı³õÊ¼»¯À´Çı¶¯ÆğÀ´£¬ÏÂÃæÈıÖÖĞÎÊ½¶¼¿ÉÒÔ
-			Class.forName("com.mysql.jdbc.Driver");// ¶¯Ì¬¼ÓÔØmysqlÇı¶¯
-			System.out.println("³É¹¦¼ÓÔØMySQLÇı¶¯³ÌĞò");
-			// Ò»¸öConnection´ú±íÒ»¸öÊı¾İ¿âÁ¬½Ó
+			// ä¹‹æ‰€ä»¥è¦ä½¿ç”¨ä¸‹é¢è¿™æ¡è¯­å¥ï¼Œæ˜¯å› ä¸ºè¦ä½¿ç”¨MySQLçš„é©±åŠ¨ï¼Œæ‰€ä»¥æˆ‘ä»¬è¦æŠŠå®ƒé©±åŠ¨èµ·æ¥ï¼Œ
+			// å¯ä»¥é€šè¿‡Class.forNameæŠŠå®ƒåŠ è½½è¿›å»ï¼Œä¹Ÿå¯ä»¥é€šè¿‡åˆå§‹åŒ–æ¥é©±åŠ¨èµ·æ¥ï¼Œä¸‹é¢ä¸‰ç§å½¢å¼éƒ½å¯ä»¥
+			Class.forName("com.mysql.jdbc.Driver");// åŠ¨æ€åŠ è½½mysqlé©±åŠ¨
+			System.out.println("æˆåŠŸåŠ è½½MySQLé©±åŠ¨ç¨‹åº");
+			// ä¸€ä¸ªConnectionä»£è¡¨ä¸€ä¸ªæ•°æ®åº“è¿æ¥
 			conn = DriverManager.getConnection(url);
-			// StatementÀïÃæ´øÓĞºÜ¶à·½·¨£¬±ÈÈçexecuteUpdate¿ÉÒÔÊµÏÖ²åÈë£¬¸üĞÂºÍÉ¾³ıµÈ
+			// Statementé‡Œé¢å¸¦æœ‰å¾ˆå¤šæ–¹æ³•ï¼Œæ¯”å¦‚executeUpdateå¯ä»¥å®ç°æ’å…¥ï¼Œæ›´æ–°å’Œåˆ é™¤ç­‰
 			Statement stmt = conn.createStatement();
 			stmt.executeUpdate(sql);
 		} catch (SQLException e) {
-			System.out.println("MySQL²Ù×÷´íÎó");
+			System.out.println("MySQLæ“ä½œé”™è¯¯");
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();

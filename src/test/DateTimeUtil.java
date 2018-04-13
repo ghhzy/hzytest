@@ -58,8 +58,8 @@ public class DateTimeUtil {
 	
 
 	/**
-     * »ñÈ¡ÏµÍ³µ±ÆÚÊ±¼ä
-     * @return: ·µ»ØµÄÊ±¼ä¸ñÊ½Èç:2010-02-23 15:10:33
+     * è·å–ç³»ç»Ÿå½“æœŸæ—¶é—´
+     * @return: è¿”å›çš„æ—¶é—´æ ¼å¼å¦‚:2010-02-23 15:10:33
      */
     public static String toLocaleString() {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -67,29 +67,29 @@ public class DateTimeUtil {
     }
     
     /**
-     * »ñÈ¡ÏµÍ³µ±ÆÚÊ±¼ä
-     * @return: ·µ»ØµÄÊ±¼ä¸ñÊ½Èç:2010-02-23
+     * è·å–ç³»ç»Ÿå½“æœŸæ—¶é—´
+     * @return: è¿”å›çš„æ—¶é—´æ ¼å¼å¦‚:2010-02-23
      */
     public static String getCurSimpleDate() {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         return df.format(new Date());
     }
     /**
-     * »ñÈ¡ÏµÍ³µ±ÆÚÊ±¼ä
-     * @return: ·µ»ØµÄÊ±¼ä¸ñÊ½Èç:2010Äê02ÔÂ23ÈÕ
+     * è·å–ç³»ç»Ÿå½“æœŸæ—¶é—´
+     * @return: è¿”å›çš„æ—¶é—´æ ¼å¼å¦‚:2010å¹´02æœˆ23æ—¥
      */
     public static String _getCurSimpleDate() {
-        SimpleDateFormat df = new SimpleDateFormat("yyyyÄêMMÔÂddÈÕ");
+        SimpleDateFormat df = new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥");
         return df.format(new Date());
     }
     
     
     /**
-     * »ñÈ¡ÏµÍ³µ±ÆÚÊ±¼ä
-     * @return: ·µ»ØµÄÊ±¼ä¸ñÊ½Èç:2010-02-23 15:10:33
+     * è·å–ç³»ç»Ÿå½“æœŸæ—¶é—´
+     * @return: è¿”å›çš„æ—¶é—´æ ¼å¼å¦‚:2010-02-23 15:10:33
      */
     public static Date getCurrentDate() {
-    	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//ÉèÖÃÈÕÆÚ¸ñÊ½
+    	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//è®¾ç½®æ—¥æœŸæ ¼å¼
 		try {
 			return df.parse(df.format(new Date()));
 		} catch (ParseException e) {
@@ -100,25 +100,25 @@ public class DateTimeUtil {
     
     /**
      * @author hzy
-     * @category ¸ñÊ½»¯Ê±¼ä,Ò»°ãÓÃÓÚ±È¶Ô ·µ»ØÊ±¼ä
+     * @category æ ¼å¼åŒ–æ—¶é—´,ä¸€èˆ¬ç”¨äºæ¯”å¯¹ è¿”å›æ—¶é—´
      */
     public static String getStrHHmm(Date date) {
     	if(date==null){
     		return null;
     	}
-    	SimpleDateFormat df = new SimpleDateFormat("HH:mm");//ÉèÖÃÈÕÆÚ¸ñÊ½
+    	SimpleDateFormat df = new SimpleDateFormat("HH:mm");//è®¾ç½®æ—¥æœŸæ ¼å¼
     	return df.format(date);
     }    
     
     /**
      * @author hzy
-     * @category ¸ñÊ½»¯Ê±¼ä,Ò»°ãÓÃÓÚ±È¶Ô
+     * @category æ ¼å¼åŒ–æ—¶é—´,ä¸€èˆ¬ç”¨äºæ¯”å¯¹
      */
     public static Date getDateHHmm(String date) {
     	if(date==null){
     		return null;
     	}
-    	SimpleDateFormat df = new SimpleDateFormat("HH:mm");//ÉèÖÃÈÕÆÚ¸ñÊ½
+    	SimpleDateFormat df = new SimpleDateFormat("HH:mm");//è®¾ç½®æ—¥æœŸæ ¼å¼
     	try {
     		return df.parse(date);
     	} catch (ParseException e) {
@@ -128,7 +128,7 @@ public class DateTimeUtil {
     }    
    
     /**
-     * »ñÈ¡µ±Ç°Ê±¼äµÄÄê
+     * è·å–å½“å‰æ—¶é—´çš„å¹´
      * @return
      */
     public static int getCorrentYear(){
@@ -138,8 +138,8 @@ public class DateTimeUtil {
     
 	
     /**
-     * ×ª»»Ê±¼ä¸ñÊ½£ºyyyy-MM-dd HH:mm:ss×ªyyyy-MM-dd
-     * @return: ·µ»ØµÄÊ±¼ä¸ñÊ½Èç:2010-02-23
+     * è½¬æ¢æ—¶é—´æ ¼å¼ï¼šyyyy-MM-dd HH:mm:ssè½¬yyyy-MM-dd
+     * @return: è¿”å›çš„æ—¶é—´æ ¼å¼å¦‚:2010-02-23
      */
 	public static String foramtDateToStr(String strDate) {
 		try {
@@ -152,14 +152,14 @@ public class DateTimeUtil {
 		return strDate;
 	}
 	/**
-     * ×ª»»Ê±¼ä¸ñÊ½£ºyyyy-MM-dd HH:mm:ss×ªyyyy-MM-dd
-     * @return: ·µ»ØµÄÊ±¼ä¸ñÊ½Èç:2010-02-23
+     * è½¬æ¢æ—¶é—´æ ¼å¼ï¼šyyyy-MM-dd HH:mm:ssè½¬yyyy-MM-dd
+     * @return: è¿”å›çš„æ—¶é—´æ ¼å¼å¦‚:2010-02-23
      */
 	public static Date foramtDateToDate(String strDate) {
 		Date date = null;
 		try {
 			if (strDate != null&&strDate.length() >= 10) {
-				SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//ÉèÖÃÈÕÆÚ¸ñÊ½
+				SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//è®¾ç½®æ—¥æœŸæ ¼å¼
 				String str = strDate.substring(0,10);
 				date=df.parse(str);
 			}
@@ -169,14 +169,14 @@ public class DateTimeUtil {
 		return date;
 	}
 	/**
-	 * ×ª»»Ê±¼ä¸ñÊ½£ºyyyy-MM-dd ×ªyyyy/MMdd
+	 * è½¬æ¢æ—¶é—´æ ¼å¼ï¼šyyyy-MM-dd è½¬yyyy/MMdd
 	 * @param strDate
 	 * @return
 	 */
 	public static Date formateDate(String strDate) {
 		Date date = null;
 		try {
-			SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd");//ÉèÖÃÈÕÆÚ¸ñÊ½
+			SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd");//è®¾ç½®æ—¥æœŸæ ¼å¼
 			date=df.parse(strDate);
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -185,11 +185,11 @@ public class DateTimeUtil {
 	}
 	
 	/**
-     * »ñÈ¡ÏµÍ³µ±ÆÚÊ±¼ä
-     * @return: ·µ»ØµÄÊ±¼ä¸ñÊ½Èç:2010-02-23 15:10:33
+     * è·å–ç³»ç»Ÿå½“æœŸæ—¶é—´
+     * @return: è¿”å›çš„æ—¶é—´æ ¼å¼å¦‚:2010-02-23 15:10:33
      */
     public static Date getCurrentDates() {
-    	SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd");//ÉèÖÃÈÕÆÚ¸ñÊ½
+    	SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd");//è®¾ç½®æ—¥æœŸæ ¼å¼
 		try {
 			return df.parse(df.format(new Date()));
 		} catch (ParseException e) {
@@ -198,11 +198,11 @@ public class DateTimeUtil {
 		}
     }
     /**
-     * »ñÈ¡ÏµÍ³µ±ÆÚÊ±¼ä
-     * @return: ·µ»ØµÄÊ±¼ä¸ñÊ½Èç:2010-02-23
+     * è·å–ç³»ç»Ÿå½“æœŸæ—¶é—´
+     * @return: è¿”å›çš„æ—¶é—´æ ¼å¼å¦‚:2010-02-23
      */
     public static Date getCurDate() {
-    	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//ÉèÖÃÈÕÆÚ¸ñÊ½
+    	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//è®¾ç½®æ—¥æœŸæ ¼å¼
     	try {
     		return df.parse(df.format(new Date()));
     	} catch (ParseException e) {
@@ -213,7 +213,7 @@ public class DateTimeUtil {
     
 	
 	/**
-	 * »ñÈ¡ Á½¸öÈÕÆÚÊ±¼ä²î(½« Ìì£¬Ğ¡Ê±£¬·ÖÖÓ£¬Ãë ·ÅÔÚmapÖĞ·µ»Ø)
+	 * è·å– ä¸¤ä¸ªæ—¥æœŸæ—¶é—´å·®(å°† å¤©ï¼Œå°æ—¶ï¼Œåˆ†é’Ÿï¼Œç§’ æ”¾åœ¨mapä¸­è¿”å›)
 	 * @param dateBegin
 	 * @param dateEnd
 	 * @return
@@ -236,15 +236,45 @@ public class DateTimeUtil {
 				   map.put("hour", hour+"");
 				   map.put("min", min+"");
 				   map.put("s", s+"");
-				   ///System.out.println(""+day+"Ìì"+hour+"Ğ¡Ê±"+min+"·Ö"+s+"Ãë");
+				   ///System.out.println(""+day+"å¤©"+hour+"å°æ—¶"+min+"åˆ†"+s+"ç§’");
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
 	   }
 	   return map;
    }
+	
+	public static void main(String[] args) {
+		
+		 Calendar cal = Calendar.getInstance();
+			cal.set(Calendar.YEAR, 2016);
+			cal.set(Calendar.MONTH, 7);
+			cal.set(Calendar.DATE, 2);
+	     cal.set(Calendar.HOUR_OF_DAY, 23);
+	     cal.set(Calendar.SECOND, 59);
+	     cal.set(Calendar.MINUTE, 59);
+	     cal.set(Calendar.MILLISECOND, 999);
+	     System.out.println(new Date(cal.getTimeInMillis()));
+		
+	}
+	
+	
+	/** 
+    * è©²å½“æ—¥æœŸçš„ä¸‹ä¸€å¤©
+    * @param specifiedDay 
+    * @return 
+    */  
+    public static String getSpecifiedDayAfter(Date date){  
+        Calendar c = Calendar.getInstance();  
+        c.setTime(date);  
+        int day=c.get(Calendar.DATE);  
+        c.set(Calendar.DATE,day+1);  
+        String dayAfter=new SimpleDateFormat("yyyy-MM-dd").format(c.getTime());  
+        return dayAfter;  
+    }
+	
 	/**
-	 *  »ñÈ¡ Á½¸öÈÕÆÚ  ¼ä¸ô Ğ¡Ê±Êı
+	 *  è·å– ä¸¤ä¸ªæ—¥æœŸ  é—´éš” å°æ—¶æ•°
 	 * @param dateBegin
 	 * @param dateEnd
 	 * @return
@@ -252,7 +282,7 @@ public class DateTimeUtil {
 	public static String getTimeDifferenceToHour(String dateBegin,String dateEnd){
 	   String timeDifference=null;
 	   if(dateBegin!=null&&!dateBegin.isEmpty()&&dateEnd!=null&&!dateEnd.isEmpty()){
-		   SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		   SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 		   try {
 				Date date1 = df.parse(dateEnd);
 				Date date2 = df.parse(dateBegin);
@@ -268,7 +298,7 @@ public class DateTimeUtil {
 	
 	
 	/**
-	 * Ê±¼ä¸ñÊ½»¯   yyyy-MM-dd
+	 * æ—¶é—´æ ¼å¼åŒ–   yyyy-MM-dd
 	 * @param date
 	 * @return
 	 * fj
@@ -286,8 +316,8 @@ public class DateTimeUtil {
 	
 	
 	 /**
-	 * ½«  ÃëÊı ×ª»»Îª   ¡°Ê±:·Ö:Ãë¡±  µÄ¸ñÊ½
-	 * @param seconds ×ÜÃëÊı
+	 * å°†  ç§’æ•° è½¬æ¢ä¸º   â€œæ—¶:åˆ†:ç§’â€  çš„æ ¼å¼
+	 * @param seconds æ€»ç§’æ•°
 	 * @return
 	 */
 	public static String getFormatTimeLength(String seconds){
@@ -304,7 +334,7 @@ public class DateTimeUtil {
 	
 	/**@author hzy
 	 * @param
-	 * Êı¾İ¿âÊ±¼ä´¦Àí
+	 * æ•°æ®åº“æ—¶é—´å¤„ç†
 	 */
 	public static String convert(Object o) {
 		String result = o == null ? "" : o.toString();
@@ -321,7 +351,7 @@ public class DateTimeUtil {
 	
 	/**@author hzy
 	 * @param
-	 * Êı¾İ¿âÊ±¼ä´¦Àí
+	 * æ•°æ®åº“æ—¶é—´å¤„ç†
 	 */
 	public static String convertToHasGTime(String date) {
 		try {
@@ -337,7 +367,7 @@ public class DateTimeUtil {
 		}
 	}
 	/**
-	 * Ê±¼ä×ª»» °ÑÈÕÆÚ×ªÎª yyyy-MM-dd(2014-10-10)
+	 * æ—¶é—´è½¬æ¢ æŠŠæ—¥æœŸè½¬ä¸º yyyy-MM-dd(2014-10-10)
 	 * @param object
 	 * @return
 	 */
@@ -358,7 +388,7 @@ public class DateTimeUtil {
 		return object;
 	}
 	
-	//»ñµÃÒ»ÖÜÇ°µÄÈÕÆÚ
+	//è·å¾—ä¸€å‘¨å‰çš„æ—¥æœŸ
 	public static String lastWeek(){
 		   Date date = new Date();
 		   int year=Integer.parseInt(new SimpleDateFormat("yyyy").format(date));
@@ -389,7 +419,7 @@ public class DateTimeUtil {
 		   return y+"-"+m+"-"+d;
 	}
 	
-	//»ñµÃallMonthÔÂÇ°µÄÈÕÆÚ£¬allMonth¿ÉÒÔÎªÈÎÒâÖµ
+	//è·å¾—allMonthæœˆå‰çš„æ—¥æœŸï¼ŒallMonthå¯ä»¥ä¸ºä»»æ„å€¼
 	public static String lastMonth(int allMonth) {
         Date date = new Date();
            int year=Integer.parseInt(new SimpleDateFormat("yyyy").format(date));
@@ -419,14 +449,14 @@ public class DateTimeUtil {
            return y+"-"+m+"-"+d;
     }
 	/**
-	 * ×ª»»Ê±¼ä¸ñÊ½£ºyyyy-MM-dd
+	 * è½¬æ¢æ—¶é—´æ ¼å¼ï¼šyyyy-MM-dd
 	 * @param strDate
 	 * @return
 	 */
 	public static Date strformateDate(String strDate) {
 		Date date = null;
 		try {
-			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//ÉèÖÃÈÕÆÚ¸ñÊ½
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//è®¾ç½®æ—¥æœŸæ ¼å¼
 			date=df.parse(strDate);
 		} catch (Exception ex) {
 			ex.printStackTrace();
@@ -434,8 +464,8 @@ public class DateTimeUtil {
 		return date;
 	}	
 	 /**
-     * ×ª»»Ê±¼ä¸ñÊ½£ºyyyy-MM-dd HH:mm:ss
-     * @return: ·µ»ØµÄÊ±¼ä¸ñÊ½Èç:2010-02-23
+     * è½¬æ¢æ—¶é—´æ ¼å¼ï¼šyyyy-MM-dd HH:mm:ss
+     * @return: è¿”å›çš„æ—¶é—´æ ¼å¼å¦‚:2010-02-23
      */
 	public static Date formatToFullDate(String strDate) {
 		Date date = null;
@@ -443,7 +473,7 @@ public class DateTimeUtil {
 			return date;
 		}
 		try {
-			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//ÉèÖÃÈÕÆÚ¸ñÊ½
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//è®¾ç½®æ—¥æœŸæ ¼å¼
 			date=df.parse(strDate);
 		} catch (ParseException e) {
 			System.out.println(e.toString());
@@ -452,8 +482,8 @@ public class DateTimeUtil {
 	}
 	
 	/**
-	 * string×ªTimestamp
-	 * @param tsStr ±ØĞëÎª"2011-05-09 11:49:45"¸ñÊ½
+	 * stringè½¬Timestamp
+	 * @param tsStr å¿…é¡»ä¸º"2011-05-09 11:49:45"æ ¼å¼
 	 * @return
 	 */
 	public static Timestamp strConvertTimestamp(String tsStr) {
@@ -471,13 +501,13 @@ public class DateTimeUtil {
     
     
     /**
-     * ¸ù¾İÈÕÆÚ»ñÈ¡ĞÇÆÚ¼¸
+     * æ ¹æ®æ—¥æœŸè·å–æ˜ŸæœŸå‡ 
      * @param newtime
      * @return
      */
 	public static String testDate(String newtime) {
-		String dayNames[] = {"ĞÇÆÚÈÕ","ĞÇÆÚÒ»","ĞÇÆÚ¶ş","ĞÇÆÚÈı","ĞÇÆÚËÄ","ĞÇÆÚÎå","ĞÇÆÚÁù"};
-		Calendar c = Calendar.getInstance();// »ñµÃÒ»¸öÈÕÀúµÄÊµÀı
+		String dayNames[] = {"æ˜ŸæœŸæ—¥","æ˜ŸæœŸä¸€","æ˜ŸæœŸäºŒ","æ˜ŸæœŸä¸‰","æ˜ŸæœŸå››","æ˜ŸæœŸäº”","æ˜ŸæœŸå…­"};
+		Calendar c = Calendar.getInstance();// è·å¾—ä¸€ä¸ªæ—¥å†çš„å®ä¾‹
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		try {
 		c.setTime(sdf.parse(newtime));

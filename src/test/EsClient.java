@@ -23,6 +23,7 @@ import org.elasticsearch.search.aggregations.Aggregation;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.Aggregations;
 import org.elasticsearch.search.aggregations.bucket.MultiBucketsAggregation;
+import org.elasticsearch.search.aggregations.bucket.histogram.DateHistogram;
 import org.elasticsearch.search.aggregations.bucket.terms.TermsBuilder;
   
 /** 
@@ -142,9 +143,20 @@ public class EsClient {
     			}
     		}
         }
-        PutMappingRequest mappingRequest = Requests.putMappingRequest("megacorp");
-        GetMappingsResponse gm = MappingsResponse
-        System.out.println( client.admin().indices().getMappings(arg0));
+        System.out.println("-----------------------------------------------------");
+        MatchQueryBuilder mqb1 = QueryBuilders.matchPhraseQuery("xy.xyname", "∫Œ’Ú”Ó");
+        SearchRequestBuilder requestBuilder1 = getTransportClient().prepareSearch("megacorp").setTypes("employee");
+    	
+		requestBuilder1.setQuery(mqb1);
+		requestBuilder1.addAggregation(
+    	        AggregationBuilders.terms("by_country").field("country")
+    	        .subAggregation(AggregationBuilders.sum("xy.xyname")
+    	            .field("xy.xyname")
+    	            
+    	        )
+    	    );
+        SearchResponse sr = requestBuilder1.execute().actionGet();
+        System.out.println( sr);
     }  
   
 }  
